@@ -7,7 +7,7 @@ public class gui implements ActionListener {
     private int count = 0;
     private JLabel output = new JLabel();
     private JLabel title;
-    private JLabel info;
+    private JLabel info, rule;
     private JFrame frame = new JFrame();
     private JPanel panel = new JPanel();
     private JTextField   textEntry = new JTextField(30);
@@ -20,7 +20,9 @@ public class gui implements ActionListener {
         title.setFont(new Font("Times New Roman", Font.LAYOUT_NO_LIMIT_CONTEXT, 45)); // font size 45
         title.setAlignmentX(frame.getWidth()/2); // centers title
         titleText.add(title); // add title to box
-        info = new JLabel("Create an alpha-numerical abbreviation of words 9 letters or longer. Do not enter punctuation",SwingConstants.CENTER);
+        info = new JLabel("Create an alpha-numerical abbreviation of a word.",SwingConstants.CENTER);
+        info.setFont(new Font("Times New Roman", Font.ITALIC, 20));
+        rule = new JLabel("Word must be three letters or longer and without punctuation)",SwingConstants.CENTER);
     }
     private void textBoxInput()
     {
@@ -44,6 +46,7 @@ public class gui implements ActionListener {
     {
         panel.add(titleText); // numeronym title
         panel.add(info); // explanation of this program
+        panel.add(rule); // explains letter minimum for input
         panel.add(textEntry); // textBox
         panel.add(enter); // enter button
         enter.addActionListener(new ActionListener() {
