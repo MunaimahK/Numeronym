@@ -25,13 +25,7 @@ public class Numeronym {
         {
             return "Invalid input.";
         }
-        if (length >= 9)
-        {
-            return input +" -> " + ch[0] + num + ch[length-1];
-        }
-        else
-        {
-            return input + " (no change)";
-        }
+       
+      return input +" -> " + ch[0] + num + ch[length-1];
     }
 }
