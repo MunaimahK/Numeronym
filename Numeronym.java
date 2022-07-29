@@ -25,6 +25,11 @@ public class Numeronym {
         {
             return "Invalid input.";
         }
+        
+        if(length < 3)
+        {
+            return input;
+        }
        
       return input +" -> " + ch[0] + num + ch[length-1];
     }
